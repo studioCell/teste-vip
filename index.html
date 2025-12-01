@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Encartes - OfferGen AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'luckiest': ['"Luckiest Guy"', 'cursive'],
+              'poppins': ['"Poppins"', 'sans-serif'],
+            },
+            colors: {
+              'bf-bg': '#000000',
+              'bf-text': '#FFD700',
+              'bf-secondary': '#DC143C',
+              'orange-highlight': '#FFA500',
+            },
+            animation: {
+              'float': 'float 3s ease-in-out infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+              'zoom-impact': 'zoomImpact 3s infinite ease-in-out',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              glow: {
+                '0%, 100%': { boxShadow: '0 0 5px #FFA500, 0 0 10px rgba(255, 165, 0, 0.4)' },
+                '50%': { boxShadow: '0 0 20px #FFA500, 0 0 30px rgba(255, 165, 0, 0.8)' },
+              },
+              zoomImpact: {
+                 '0%, 100%': { transform: 'scale(1)' },
+                 '10%': { transform: 'scale(1.1)' },
+                 '20%': { transform: 'scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for textareas */
+      textarea::-webkit-scrollbar {
+        width: 8px;
+      }
+      textarea::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      textarea::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+      textarea::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "html2canvas": "https://aistudiocdn.com/html2canvas@^1.4.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
